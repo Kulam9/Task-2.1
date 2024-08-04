@@ -42,7 +42,7 @@ function App() {
     <p className={styles["no-margin-text"]}>
       Текущее значение: "<output className={styles["current-value"]}>{value}</output>"
     </p>
-    <div className={styles["error"]}>{error}</div>
+    {error !== '' ? (<div className={styles["error"]}>{error}</div>) : ('')}
     <div className={styles["buttons-container"]}>
       <button className={styles["button"]} onClick={() => onInputButtonClick()}>Ввести новое</button>
       <button className={styles["button"]} disabled = {!isValueVaild} onClick={() => onAddButtonClick()}>Добавить в список</button>
